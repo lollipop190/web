@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <h1>这是一个注册页面啦啦啦！</h1>
+    <style>
+        *{
+            color : black;
+            size : 30px;
+        }
+        p{
+            background-color:lightblue;
+
+        }
+        .font{
+            size:10px;
+            color:greenyellow;
+        }
+    </style>
+</head>
+<body>
+<form name = "sing_in" action = "" method = "post">
+    <p>
+        <label for = "username" class = "font">用户名：</label>
+        <input id = "username" type = "text" />
+    </p>
+    <p>
+        <label for = "password">密码：</label>
+        <input id = "password" type = "password" />
+    </p>
+
+    <p>
+        <label>
+            您的出生年月： 年：
+            <select name = "birthday" id = "birthday">
+                <option value = "2020">2020</option>
+            </select>
+            <label>月：</label>
+            <select name = "birthday" >
+                <option value = "1">1</option>
+            </select>
+        </label>
+    </p>
+    <p>
+        <label>
+            <!-- 单选框 -->
+            您的学历：
+            小学<input name = "education" type = "radio" value = "01">
+            初中<input name = "education" type = "radio" value = "02">
+            高中<input name = "education" type = "radio" value = "03">
+            本科<input name = "education" type = "radio" value = "04">
+            硕士<input name = "education" type = "radio" value = "05">
+            博士<input name = "education" type = "radio" value = "06">
+            lz是永远滴神<input name = "education" type = "radio" value = "07">
+        </label>
+    </p>
+    <!--复选框-->
+    <p>
+        <label>
+            您的爱好：
+            吃蝙蝠<input name = "h1" type = "checkbox" value = "01">
+            喝蝙蝠汤<input name = "h2" type = "checkbox" value = "02">
+            吸蝙蝠汁<input name = "h3" type = "checkbox" value = "03">
+            吃果子狸<input name = "h4" type = "checkbox" value = "04">
+            喝果子狸汁<input name = "h5" type = "checkbox" value = "05">
+            广场蹦迪<input name = "h6" type = "checkbox" value = "06">
+            跳广场舞<input name = "h7" type = "checkbox" value = "07">
+        </label>
+    </p>
+    <!--       多行文本-->
+    <label>您的自我吹嘘：（别谦虚尽情吹）
+        <textarea name = "words" rows = "20" cols = "80"></textarea>
+    </label>
+
+    <br><br>
+    <input name = "summit" type = "submit" value = "注册"/>
+    <input nem = "reset" type = "reset" value = "重新填写"/>
+    <a href="http://www.baidu.com">点击我跳转至百度</a>
+    <br>
+    <span>内联元素测试1</span>
+    <span>内联元素测试2</span>
+</form>
+
+
+</body>
+</html>
