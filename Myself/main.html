@@ -3,16 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>二锅头</title>
+<!--    /*导航栏*/-->
+    <br>
+    <nav class="mean" style="text-align: center">
+        <ul>
+            <li>菜单</li>
+            <li>联系</li>
+            <li>了解更多</li>
+        </ul>
+    </nav>
     <style>
-    body{
-        background-color: lightblue;
-    }
+        body{
+            background-image: url("image/timg.jpg");/*这是那个美丽的背景*/
+            /*background-image: url("image/hj2.png");*/
+            /*background-size: inherit;*/
+
+        }
+        #name{
+            font-size: 50px;
+        }
+        .mean li{
+            font-size: 25px;
+            list-style-type: none;
+            display: inline-block;
+            width: 200px;
+
+        }
+        .contact li{
+            font-size: 20px;
+            list-style-type: none;
+            display: inline-block;
+            width:100px;
+            background-color: oldlace;
+        }
+        .title{
+            font-size: 30px;
+        }
+        img{
+            border-radius: 3000px;
+        }
     </style>
 </head>
 
 <body>
     <div style="text-align: center; padding: 30px 0;">
+
+        <br>
         <img src="image/head.jpg" width="15%">
+        <br>
+
+        <div id="name">二锅头</div>
+        <br>
+        <div style="text-align: center" class="title">我的</div>
+        <div class="contact" style="text-align: center">
+            <ul>
+                <li>  <a href="http://www.qq.com" target="_blank"> QQ</a></li>
+                <li>微博</li>
+                <li>知乎</li>
+                <li>微信</li>
+                <li>Github</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
