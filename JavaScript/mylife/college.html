@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的大学</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var lastSchool = document.getElementById("lastSchool");
+            var lastFood = document.getElementById("lastFood");
+            var nextSchool = document.getElementById("nextSchool");
+            var nextFood = document.getElementById("nextFood");
+            //获取按钮实例
+            var imgFood = document.getElementsByTagName("img")[0];
+            var imgSchool = document.getElementsByTagName("img")[1];
+            var imgArrayFood = ["image/college/food/0 (1).jpg","image/college/food/0 (2).jpg","image/college/food/0 (3).jpg","image/college/food/0 (4).jpg",
+                "image/college/food/0 (5).jpg","image/college/food/0 (6).jpg","image/college/food/0 (7).jpg",
+                "image/college/food/0 (8).jpg","image/college/food/0 (9).jpg","image/college/food/0 (10).jpg"];
+            //获取图片链接和图片数组
+            var indexFood = 0;
+            var numberFood = document.getElementById("numberFood");
+            var numberSchool = document.getElementById("numberSchool");
+            nextFood.onclick = function () {
+                indexFood++;
+                if(indexFood == imgArrayFood.length)
+                    indexFood = 0;
+                imgFood.src = imgArrayFood[indexFood];
+                numberFood.innerText = "第"+(indexFood+1)+"张，共"+ imgArrayFood.length+"张";
+            };
+            lastFood.onclick = function () {
+                indexFood--;
+                if(indexFood == -1)
+                    indexFood = imgArrayFood.length-1;
+                imgFood.src = imgArrayFood[indexFood];
+                numberFood.innerText = "第"+(indexFood+1)+"张，共"+ imgArrayFood.length+"张";
+            };
+            var imgArraySchool = ["image/college/school/0 (1).jpg","image/college/school/0 (2).jpg","image/college/school/0 (3).jpg",
+                "image/college/school/0 (4).jpg",
+                "image/college/school/0 (5).jpg","image/college/school/0 (6).jpg","image/college/school/0 (7).jpg",
+                "image/college/school/0 (8).jpg","image/college/school/0 (9).jpg","image/college/school/0 (10).jpg","image/college/school/0 (15).jpg"
+                ,"image/college/school/0 (11).jpg","image/college/school/0 (12).jpg","image/college/school/0 (13).jpg","image/college/school/0 (14).jpg"
+                ,"image/college/school/0 (16).jpg"];
+            //获取图片链接和图片数组
+            var indexSchool = 0;
+            nextSchool.onclick = function () {
+                indexSchool++;
+                if(indexSchool == imgArraySchool.length)
+                    indexSchool = 0;
+                imgSchool.src = imgArraySchool[indexSchool];
+                numberSchool.innerText = "第"+(indexSchool+1)+"张，共"+ imgArraySchool.length+"张";
+            };
+            lastSchool.onclick = function () {
+                indexSchool--;
+                if(indexSchool == -1)
+                    indexSchool = imgArraySchool.length-1;
+                imgSchool.src = imgArraySchool[indexSchool];
+                numberSchool.innerText = "第"+(indexSchool+1)+"张，共"+ imgArraySchool.length+"张";
+            };
+            numberFood.innerText = "第"+(indexFood+1)+"张，共"+ imgArrayFood.length+"张";
+            numberSchool.innerText = "第"+(indexSchool+1)+"张，共"+ imgArraySchool.length+"张";
+
+
+        }
+    </script>
+    <style>
+        body{
+            background-image: url("image/snow.jpg");
+        }
+        *{
+            text-align: center;
+        }
+        #food,#school{
+            width:600px;
+        }
+        button{
+            margin-left: 30px;
+            margin-right: 30px;
+            background-color: white;
+        }
+        img{
+            width: 600px;
+            object-fit:cover;
+            height: 600px;
+        }
+        #left,#right{
+            margin-top: 50px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        p{
+            font-size: 20px;
+            margin:0px;
+            margin-bottom: 5px;
+        }
+        #p1,#p2{
+            font-size: 40px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="left">
+    <p id="p2">美食</p>
+<div id="food" >
+    <img src="image/college/food/0 (1).jpg" >
+
+</div>
+
+<div>
+    <p id="numberFood"></p>
+
+    <button id="lastFood">←上一张</button>
+    <button id="nextFood">下一张→</button>
+
+</div>
+</div>
+
+<div id="right">
+    <p id="p1">美景</p>
+        <div id="school" >
+            <img src="image/college/school/0 (1).jpg" >
+        </div>
+
+        <div>
+            <p id="numberSchool"></p>
+            <button id="lastSchool">←上一张</button>
+            <button id="nextSchool">下一张→</button>
+
+        </div>
+</div>
+</body>
+</html>

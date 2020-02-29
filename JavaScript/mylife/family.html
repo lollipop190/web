@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的家人</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var last = document.getElementById("last");
+            var next = document.getElementById("next");
+            //获取按钮实例
+            var img = document.getElementsByTagName("img")[0];
+            var imgArray = ["image/family/0 (1).jpg","image/family/0 (2).jpg","image/family/0 (3).jpg","image/family/0 (4).jpg",
+                "image/family/0 (5).jpg","image/family/0 (6).jpg","image/family/0 (7).jpg",
+                "image/family/0 (8).jpg","image/family/0 (9).jpg","image/family/0 (10).jpg"];
+            //获取图片链接和图片数组
+            var index = 0;
+            var number = document.getElementById("number");
+            next.onclick = function () {
+                index++;
+                if(index == imgArray.length)
+                    index = 0;
+                img.src = imgArray[index];
+                number.innerText = "第"+(index+1)+"张，共"+ imgArray.length+"张";
+            };
+            last.onclick = function () {
+                index--;
+                if(index == -1)
+                    index = imgArray.length-1;
+                img.src = imgArray[index];
+                number.innerText = "第"+(index+1)+"张，共"+ imgArray.length+"张";
+            };
+            number.innerText = "第"+(index+1)+"张，共"+ imgArray.length+"张";
+
+        }
+    </script>
+    <style>
+        body{
+        background-image: url("image/snow.jpg");
+    }
+        *{
+            text-align: center;
+        }
+        #photo{
+            text-align: center;
+            margin: 50px auto;
+            width:500px;
+        }
+        button{
+
+            margin-left: 30px;
+            margin-right: 30px;
+
+        }
+        img{
+            width: 600px;
+            object-fit:cover;
+            height: 600px;
+        }
+        p{
+            font-size: 20px;
+            margin:0px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="photo" >
+    <img src="image/family/0 (1).jpg" >
+</div>
+<div>
+    <p id="number"></p>
+    <button id="last">←上一张</button>
+    <button id="next">下一张→</button>
+
+</div>
+
+</body>
+</html>

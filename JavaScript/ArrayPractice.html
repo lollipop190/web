@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script type="text/javascript">
+        function Person(name,age) {
+            this.name = name;
+            this.age = age;
+        }
+        var per1 = new Person("ming",19);
+        var per2 = new Person("hua",19);
+        var per3 = new Person("min",17);
+        var per4 = new Person("jian",15);
+        var per5 = new Person("oracle",20);
+
+        var arr = new Array(per1,per2,per3,per4,per5);
+        Person.prototype.toString = function (){
+            return "姓名" + this.name + "年龄" + this.age;
+        }
+        function getAdult(arr) {
+            var adult = new Array();
+            for(i = 0 ;i<arr.length;i++){
+                if(arr[i].age>18)
+                    adult.push(arr[i]);
+            }
+                return adult;
+        }
+
+        var adult = getAdult(arr);
+        console.log(adult[0]+adult[1]+adult[2]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
